@@ -6,10 +6,9 @@ import { GlassButtonComponent } from '../../shared/ui/glass-button.component';
 import { formatMonth } from '../../domain/calculations';
 
 @Component({
-  selector: 'app-month-details',
-  standalone: true,
-  imports: [CommonModule, GlassCardComponent, GlassButtonComponent],
-  template: `
+    selector: 'app-month-details',
+    imports: [CommonModule, GlassCardComponent, GlassButtonComponent],
+    template: `
     <div class="month-details-page">
       <div class="header">
         <h1>{{ monthDisplay }}</h1>
@@ -60,7 +59,7 @@ import { formatMonth } from '../../domain/calculations';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     @import '../../shared/ui/theme-tokens.scss';
 
     .month-details-page {

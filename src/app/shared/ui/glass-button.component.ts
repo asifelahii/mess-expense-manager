@@ -2,10 +2,9 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-glass-button',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-glass-button',
+    imports: [CommonModule],
+    template: `
     <button 
       [type]="type"
       [disabled]="disabled"
@@ -15,7 +14,7 @@ import { CommonModule } from '@angular/common';
       <ng-content></ng-content>
     </button>
   `,
-  styles: [`
+    styles: [`
     @import './theme-tokens.scss';
 
     .glass-button {

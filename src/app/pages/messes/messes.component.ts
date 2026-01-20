@@ -5,10 +5,9 @@ import { GlassCardComponent } from '../../shared/ui/glass-card.component';
 import { GlassButtonComponent } from '../../shared/ui/glass-button.component';
 
 @Component({
-  selector: 'app-messes',
-  standalone: true,
-  imports: [CommonModule, RouterLink, GlassCardComponent, GlassButtonComponent],
-  template: `
+    selector: 'app-messes',
+    imports: [CommonModule, RouterLink, GlassCardComponent, GlassButtonComponent],
+    template: `
     <div class="messes-page">
       <div class="header">
         <h1>Mess Expense Manager</h1>
@@ -37,7 +36,7 @@ import { GlassButtonComponent } from '../../shared/ui/glass-button.component';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     @import '../../shared/ui/theme-tokens.scss';
 
     .messes-page {

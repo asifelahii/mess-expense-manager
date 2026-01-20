@@ -2,15 +2,14 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-glass-card',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-glass-card',
+    imports: [CommonModule],
+    template: `
     <div class="glass-card" [class.clickable]="clickable">
       <ng-content></ng-content>
     </div>
   `,
-  styles: [`
+    styles: [`
     @import './theme-tokens.scss';
 
     .glass-card {
