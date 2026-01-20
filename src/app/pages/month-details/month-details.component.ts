@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { GlassCardComponent } from '../../shared/ui/glass-card.component';
 import { GlassButtonComponent } from '../../shared/ui/glass-button.component';
+import { formatMonth } from '../../domain/calculations';
 
 @Component({
   selector: 'app-month-details',
@@ -155,14 +156,7 @@ export class MonthDetailsComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.messId = params['id'];
       this.month = params['month'];
-      this.monthDisplay = this.formatMonth(this.month);
+      this.monthDisplay = formatMonth(this.month);
     });
-  }
-
-  private formatMonth(monthStr: string): string {
-    if (!monthStr) return '';
-    const [year, month] = monthStr.split('-');
-    const date = new Date(parseInt(year), parseInt(month) - 1);
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
   }
 }

@@ -1,21 +1,6 @@
 import { Injectable } from '@angular/core';
 import Dexie, { Table } from 'dexie';
-
-export interface Mess {
-  id?: number;
-  name: string;
-  description?: string;
-  createdAt: Date;
-}
-
-export interface MonthData {
-  id?: number;
-  messId: number;
-  month: string; // yyyy-mm format
-  totalExpense: number;
-  memberCount: number;
-  locked: boolean;
-}
+import { Mess, MonthData } from '../../domain/models';
 
 export interface AuditLog {
   id?: number;
