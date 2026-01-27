@@ -1,3 +1,5 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { LayoutRoutes } from './shared/routes/layout.routes';
+
+export const routes: Routes = [...LayoutRoutes];
