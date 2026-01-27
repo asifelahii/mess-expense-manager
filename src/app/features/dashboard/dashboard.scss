@@ -1,0 +1,10 @@
+#dashboard-body {
+  display: flex;
+  gap: 1rem;
+
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.col1 { flex: 1;} // smlaller column
+.col2 { flex: 2;} // larger column
+.col3 { flex: 3;} // Largest column

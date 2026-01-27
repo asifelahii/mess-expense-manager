@@ -7,11 +7,15 @@ export const LayoutRoutes: Routes = [
     path: '',
     component: Layout,
     children: [
-    //   {
-    //     path: '',
-    //     redirectTo: '',
-    //     pathMatch: 'full',
-    //   },
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full',
+      },
+
+      {path: 'dashboard',
+        loadComponent: () => import('../../features/dashboard/dashboard').then((m) => m.Dashboard),
+      },
 
       {
         path: 'messes',
@@ -35,7 +39,7 @@ export const LayoutRoutes: Routes = [
 
       {
         path: '**',
-        redirectTo: '/not-found', // redirects to 404 page, in case of invalid routes
+        redirectTo: 'not-found', // redirects to 404 page, in case of invalid routes
       },
     ],
   },

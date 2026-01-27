@@ -1,0 +1,82 @@
+/* Aurora Quartz Aqua — Base Styles
+   Only global defaults here: background, typography, links, focus outline.
+*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  /* Background */
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+
+  /* Typography */
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+  line-height: 1.45;
+
+  /* Improves font rendering on dark backgrounds */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle background aurora blobs (optional visual depth) */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: -20vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 20% 10%, var(--blob-periwinkle) 0%, transparent 55%),
+    radial-gradient(circle at 80% 20%, var(--blob-aqua) 0%, transparent 55%);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+body::after {
+  background: radial-gradient(circle at 65% 85%, var(--blob-rose) 0%, transparent 60%);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+a {
+  color: var(--accent-periwinkle);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Universal focus ring */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 10px;
+}
+
+/* Optional: consistent horizontal rule/divider */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--divider);
+}

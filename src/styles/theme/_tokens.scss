@@ -1,0 +1,69 @@
+/* Aurora Quartz Aqua — Design Tokens (Dark-first)
+   Source: S0-3 issue spec. Keep alphas as defined to avoid harsh neon.
+*/
+:root {
+  /* Background layers */
+  --bg-0: #070a12;
+  --bg-1: #0b0f17;
+  --bg-2: #101827;
+
+  /* Background gradient */
+  --bg-gradient: linear-gradient(135deg, #070a12 0%, #0b0f17 45%, #0e1a2b 100%);
+
+  /* Aurora blobs (optional) */
+  --blob-periwinkle: rgba(122, 162, 255, 0.12);
+  --blob-aqua: rgba(45, 226, 230, 0.1);
+  --blob-rose: rgba(255, 111, 174, 0.08);
+
+  /* Glass surfaces */
+  --glass-fill: rgba(255, 255, 255, 0.06);
+  --glass-fill-strong: rgba(255, 255, 255, 0.075);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-strong: rgba(255, 255, 255, 0.12);
+
+  /* Blur references (used later in components) */
+  --blur-md: 18px;
+  --blur-lg: 24px;
+  --blur-xl: 32px;
+
+  /* Text hierarchy */
+  --text-primary: #f3f6ff;
+  --text-secondary: rgba(243, 246, 255, 0.72);
+  --text-muted: rgba(243, 246, 255, 0.5);
+  --text-disabled: rgba(243, 246, 255, 0.32);
+  --divider: rgba(243, 246, 255, 0.1);
+
+  /* Accents */
+  --accent-aqua: #2de2e6;
+  --accent-periwinkle: #7aa2ff;
+  --accent-rose: #ff6fae;
+  --accent-blue: #4c7dff;
+  --accent-violet: #8b7cff;
+
+  /* Accent gradients */
+  --grad-primary: linear-gradient(135deg, #2de2e6 0%, #4c7dff 100%);
+  --grad-accent: linear-gradient(90deg, #2de2e6 0%, #7aa2ff 52%, #ff6fae 100%);
+
+  /* Glow (keep low opacity, large blur) */
+  --glow-aqua: rgba(45, 226, 230, 0.28);
+  --glow-periwinkle: rgba(122, 162, 255, 0.22);
+  --glow-rose: rgba(255, 111, 174, 0.18);
+
+  /* Semantic */
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #fb7185;
+  --info: #60a5fa;
+
+  /* Radii */
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.35);
+  --shadow-glow-aqua: 0 10px 30px rgba(45, 226, 230, 0.14);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgba(45, 226, 230, 0.2);
+}
