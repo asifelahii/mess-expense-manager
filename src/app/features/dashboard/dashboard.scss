@@ -1,10 +1,21 @@
-#dashboard-body {
-  display: flex;
-  gap: 1rem;
-
-  border: 1px solid white;
-  border-radius: 5px;
+.dashboard-shell {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 12px;
 }
-.col1 { flex: 1;} // smlaller column
-.col2 { flex: 2;} // larger column
-.col3 { flex: 3;} // Largest column
+
+.dashboard-main {
+  min-width: 0;
+}
+
+// #dashboard-body {
+//   display: flex;
+//   gap: 1rem;
+
+//   border: 1px solid white;
+//   border-radius: 5px;
+// }
+// .col1 { flex: 1;} // smlaller column
+// .col2 { flex: 2;} // larger column
+// .col3 { flex: 3;} // Largest column

@@ -1,0 +1,58 @@
+<app-glass-panel class="sidebar" layout="shell" [interactive]="false">
+  <div class="sidebar-shell">
+    <!-- Header -->
+    <header class="sidebar-header">
+      <div class="brand">
+        <div class="brand-left">
+          <div class="brand-logo">BM</div>
+          <div class="brand-name">Bachelor<br />Manager</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menu (scrollable if needed) -->
+    @for (item of menuItems; track item.key) {
+      <nav class="menu" aria-label="Sidebar menu">
+        <button
+          type="button"
+          class="menu-item"
+          [class.is-active]="active === item.key"
+          (click)="setActive(item.key)"
+        >
+          <span class="menu-icon" aria-hidden="true">
+            <app-tahoe-icon [name]="item.icon" [size]="18"></app-tahoe-icon>
+          </span>
+          <span class="menu-label">{{ item.label }}</span>
+        </button>
+      </nav>
+    }
+
+    <!-- Bottom profile pinned -->
+    <footer class="sidebar-footer">
+      <section class="profile tahoe-glass">
+        <div class="profile-top">
+          <div class="avatar" aria-hidden="true">
+            <span>{{ avatartInitial }}</span>
+          </div>
+
+          <div class="who">
+            <div class="name">{{ name }}</div>
+            <div class="role">{{ role }}</div>
+          </div>
+        </div>
+
+        <div class="profile-actions">
+          <button type="button" class="action-btn">
+            <app-tahoe-icon name="logout" [size]="16"></app-tahoe-icon>
+            <span>Logout</span>
+          </button>
+
+          <button type="button" class="action-btn">
+            <app-tahoe-icon name="exit" [size]="16"></app-tahoe-icon>
+            <span>Exit</span>
+          </button>
+        </div>
+      </section>
+    </footer>
+  </div>
+</app-glass-panel>
