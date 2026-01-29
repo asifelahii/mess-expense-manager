@@ -1,0 +1,35 @@
+/* Optional: small icon button style for right-side action slot */
+.tahoe-icon-btn {
+  height: 34px;
+  width: 34px;
+  border-radius: 12px;
+
+  display: inline-grid;
+  place-items: center;
+
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+
+  color: var(--text-primary);
+  cursor: pointer;
+
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.tahoe-icon-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+.tahoe-icon-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-soft), var(--focus-ring);
+}

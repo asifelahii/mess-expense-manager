@@ -1,0 +1,45 @@
+.tahoe-glass {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  isolation: isolate;
+}
+
+.tahoe-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* subtle inner highlight that looks good on both Aurora + Tahoe */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.06));
+  opacity: 0.35;
+}
+
+@mixin tahoe-interactive {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: var(--glass-border-strong);
+    box-shadow: var(--shadow-soft);
+  }
+
+  &:focus-within {
+    box-shadow: var(--shadow-soft), var(--focus-ring);
+  }
+}
+
+.tahoe-interactive {
+  @include tahoe-interactive;
+}

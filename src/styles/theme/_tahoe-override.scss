@@ -1,0 +1,51 @@
+/* Tahoe (Light glass) override layer
+   Uses SAME token names as Aurora so components stay consistent.
+*/
+:root[data-theme='tahoe'] {
+  /* Background (spec asked: #F7F8FC → #EEF2FF) */
+  --bg-0: #f7f8fc;
+  --bg-1: #f3f5ff;
+  --bg-2: #eef2ff;
+
+  --bg-gradient: linear-gradient(180deg, #f7f8fc 0%, #eef2ff 100%);
+
+  /* blobs optional (light, very subtle) */
+  --blob-periwinkle: rgba(122, 162, 255, 0.1);
+  --blob-aqua: rgba(45, 226, 230, 0.08);
+  --blob-rose: rgba(255, 111, 174, 0.06);
+
+  /* Text (spec) */
+  --text-primary: #111827;
+  --text-secondary: #6b616e;
+  --text-muted: rgba(17, 24, 39, 0.55);
+  --text-disabled: rgba(17, 24, 39, 0.32);
+  --divider: rgba(17, 24, 39, 0.1);
+
+  /* Accents */
+  --accent-rose: #ef4444; /* Tahoe red */
+  --error: #ef4444;
+  --success: #16a34a;
+
+  /* Glass (spec: 75–90%, border white ~25%) */
+  --glass-fill: rgba(255, 255, 255, 0.82);
+  --glass-fill-strong: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-border-strong: rgba(255, 255, 255, 0.32);
+
+  /* Blur */
+  --blur-md: 18px;
+  --blur-lg: 24px;
+  --blur-xl: 32px;
+
+  /* Radii (spec 18–22px) */
+  --radius-md: 18px;
+  --radius-lg: 20px;
+  --radius-xl: 22px;
+
+  /* Shadows (soft, subtle on light bg) */
+  --shadow-soft: 0 14px 40px rgba(17, 24, 39, 0.1);
+  --shadow-glow-aqua: 0 18px 56px rgba(17, 24, 39, 0.12);
+
+  /* Focus ring (subtle) */
+  --focus-ring: 0 0 0 3px rgba(17, 24, 39, 0.1);
+}

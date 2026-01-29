@@ -1,0 +1,96 @@
+@use '../../../../styles/theme/glass';
+
+:host {
+  display: block;
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+:host([data-tone='strong']) .card {
+  background: var(--glass-fill-strong);
+}
+
+:host(.is-interactive) .card {
+  @include glass.tahoe-interactive;
+}
+
+:host([data-density='compact']) .card {
+  padding: 12px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  min-width: 0;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.card-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-body {
+  color: var(--text-secondary);
+}
+
+// :host {
+//   display: block;
+// }
+
+// .card {
+//   border-radius: var(--tahoe-radius-card);
+//   padding: var(--tahoe-pad-card);
+// }
+
+// .tone-strong {
+//   background: var(--tahoe-glass-bg-strong);
+// }
+// .tone-weak {
+//   background: var(--tahoe-glass-bg-weak);
+// }
+
+// :host(.is-interactive) .card {
+//   @extend .tahoe-interactive;
+// }
+
+// .card-header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: var(--tahoe-gap);
+//   margin-bottom: 10px;
+// }
+
+// .card-title {
+//   min-width: 0;
+//   font-weight: 650;
+//   letter-spacing: -0.01em;
+//   color: var(--tahoe-text-primary);
+// }
+
+// .card-body {
+//   color: var(--tahoe-text-secondary);
+// }
+
+// .card-actions {
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 8px;
+// }
+
+// .density-compact {
+//   padding: 12px;
+// }
