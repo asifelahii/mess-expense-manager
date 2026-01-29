@@ -7,15 +7,21 @@ body {
   margin: 0;
   color: var(--text-primary);
   background: var(--bg-gradient);
+
   font-family:
+    'Manrope',
     ui-sans-serif,
     system-ui,
     -apple-system,
-    Segoe UI,
+    'Segoe UI',
     Roboto,
     Arial,
     'Apple Color Emoji',
     'Segoe UI Emoji';
+
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* subtle default text rendering */
