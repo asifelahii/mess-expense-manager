@@ -1,0 +1,32 @@
+.pill {
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  font-weight: 650;
+  cursor: pointer;
+}
+:host(.is-active) .pill {
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--shadow-soft), var(--focus-ring);
+}
+
+// .pill {
+//   border-radius: var(--tahoe-radius-pill);
+//   padding: 10px 14px;
+//   border: 1px solid var(--tahoe-glass-border);
+//   background: var(--tahoe-glass-bg);
+//   color: var(--tahoe-text-primary);
+//   font-weight: 600;
+//   cursor: pointer;
+// }
+
+// :host(.is-active) .pill {
+//   box-shadow: var(--tahoe-shadow), var(--tahoe-focus-ring);
+//   border-color: rgba(255, 255, 255, 0.35);
+// }
+
+// :host(.is-danger) .pill {
+//   color: var(--tahoe-accent-red);
+// }

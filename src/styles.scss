@@ -1,5 +1,14 @@
 @use './styles/theme/tokens';
+@use './styles/theme/tahoe-override';
 @use './styles/theme/base';
+@use './styles/theme/glass';
+@use './styles/theme/components'; /* add this file below */
+
+// @use './styles/theme/tokens';
+// @use './styles/theme/base';
+// @use './styles/theme/tahoe-override';
+// @use './styles/theme/glass';
+// @use './styles/theme/components';
 
 @tailwind base;
 @tailwind components;

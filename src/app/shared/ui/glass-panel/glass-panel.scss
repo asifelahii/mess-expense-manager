@@ -1,0 +1,96 @@
+@use '../../../../styles/theme/glass';
+
+:host {
+  display: block;
+}
+
+.panel {
+  border-radius: var(--radius-xl);
+  padding: 18px;
+}
+
+:host(.is-interactive) .panel {
+  @include glass.tahoe-interactive;
+}
+
+:host([data-density='compact']) .panel {
+  padding: 14px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  min-width: 0;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.panel-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel-body {
+  color: var(--text-secondary);
+}
+
+// :host {
+//   display: block;
+// }
+
+// .panel {
+//   border-radius: var(--tahoe-radius-panel);
+//   padding: var(--tahoe-pad-panel);
+// }
+
+// :host(.is-interactive) .panel {
+//   /* opt-in interactive behavior */
+//   cursor: pointer;
+//   transition: all 0.2s ease;
+
+//   &:hover {
+//     background: rgba(255, 255, 255, 0.15);
+//     transform: translateY(-1px);
+//   }
+
+//   &:focus-within {
+//     background: rgba(255, 255, 255, 0.15);
+//   }
+// }
+
+// .panel-header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: var(--tahoe-gap);
+//   margin-bottom: 12px;
+// }
+
+// .panel-title {
+//   min-width: 0;
+//   color: var(--tahoe-text-primary);
+//   font-weight: 650;
+//   letter-spacing: -0.01em;
+// }
+
+// .panel-actions {
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 8px;
+// }
+
+// .panel-body {
+//   color: var(--tahoe-text-secondary);
+// }
+
+// .density-compact {
+//   padding: 14px;
+// }
