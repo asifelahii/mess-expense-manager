@@ -1,0 +1,81 @@
+<article class="announcement-card" [attr.data-variant]="variant">
+  <!-- Header -->
+  <header class="card-header">
+    <div class="header-content">
+      @if (icon) {
+        <app-tahoe-icon class="header-icon" [name]="icon" [size]="18" />
+      }
+      <h3 class="card-title">{{ title }}</h3>
+    </div>
+    @if (showRefreshButton) {
+      <button class="refresh-btn" (click)="onRefresh()" aria-label="Refresh" title="Get new quote">
+        <app-tahoe-icon class="refresh-icon" name="refresh" [size]="18" />
+      </button>
+    }
+  </header>
+
+  <!-- Body - Announcements List -->
+  <div class="card-body">
+    <div class="announcements-list">
+      @for (item of displayedItems; track item.text; let i = $index) {
+        <div
+          class="announcement-item"
+          [class.has-timestamp]="item.timestamp"
+          [style.animation-delay.ms]="i * 50"
+        >
+          <!-- Icon/Badge (optional) -->
+          @if (item.icon || item.badge) {
+            <div class="item-indicator">
+              @if (item.icon) {
+                <app-tahoe-icon class="item-icon" [name]="item.icon" [size]="16" />
+              }
+              @if (item.badge) {
+                <span class="item-badge">{{ item.badge }}</span>
+              }
+            </div>
+          }
+
+          <!-- Content -->
+          <div class="item-content">
+            <p class="item-text">{{ item.text }}</p>
+            @if (item.timestamp) {
+              <span class="item-timestamp">{{ item.timestamp }}</span>
+            }
+          </div>
+        </div>
+      }
+
+      <!-- Empty State -->
+      @if (items.length === 0) {
+        <div class="empty-state">
+          <app-tahoe-icon class="empty-icon" name="inbox" [size]="40" />
+          <p class="empty-text">No items to display</p>
+        </div>
+      }
+    </div>
+
+    <!-- Expand/Collapse Button (only shows if expandable and has more items) -->
+    @if (hasMoreItems) {
+      <button class="expand-btn" (click)="toggleExpand()" [attr.aria-expanded]="isExpanded">
+        <span class="expand-text">
+          {{ isExpanded ? 'Show Less' : 'Show All (' + items.length + ')' }}
+        </span>
+        <span class="expand-icon">
+          {{ isExpanded ? '▲' : '▼' }}
+        </span>
+      </button>
+    }
+  </div>
+
+  <!-- Footer (optional - for quotes or references) -->
+  @if (footer) {
+    <footer class="card-footer">
+      <div class="footer-content">
+        <p class="footer-text">{{ footer.text }}</p>
+        @if (footer.reference) {
+          <span class="footer-reference">— {{ footer.reference }}</span>
+        }
+      </div>
+    </footer>
+  }
+</article>

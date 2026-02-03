@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+
 import { Navbar } from '../../shared/components/navbar/navbar';
-import { GlassCardComponent } from '../../shared/ui/glass-card/glass-card';
-import { LeftSidebar } from '../../shared/components/left-sidebar/left-sidebar';
+import { LeftSidebar } from '../../shared/components/dashboard/left-sidebar/left-sidebar';
+import { RightSidebar } from '../../shared/components/dashboard/right-sidebar/right-sidebar';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [LeftSidebar],
+  imports: [LeftSidebar, RightSidebar, Navbar],
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.scss'],
 })

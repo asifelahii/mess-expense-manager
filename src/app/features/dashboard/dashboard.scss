@@ -1,12 +1,19 @@
 .dashboard-shell {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 18px;
-  padding: 12px;
+  margin-top: 60px; /* account for fixed navbar height */
+  min-height: calc(100dvh - 60px); /* full viewport height minus navbar */
+  position: relative; /* For fixed sidebar positioning context */
 }
 
 .dashboard-main {
+  /* Left margin: left sidebar width (max 250px) + gap */
+  margin-left: calc(clamp(150px, 18vw, 250px) + 30px);
+  /* Right margin: right sidebar width (320px) + gap */
+  margin-right: calc(320px + 30px);
+  /* Top and bottom padding */
+  padding: 12px;
   min-width: 0;
+  min-height: calc(100dvh - 60px - 24px);
+  overflow-y: auto; /* Allow main content to scroll */
 }
 
 // #dashboard-body {

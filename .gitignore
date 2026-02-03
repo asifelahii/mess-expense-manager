@@ -41,3 +41,10 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Developer assistance documentation (auto-generated)
+docs/ANNOUNCEMENT_CARD_GUIDE.md
+docs/IMPLEMENTATION_SUMMARY.md
+docs/QUICK_REFERENCE.md
+docs/VISUAL_DESIGN.md
+docs/README_ANNOUNCEMENT_CARDS.md
