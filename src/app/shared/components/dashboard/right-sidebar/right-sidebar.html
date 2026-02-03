@@ -1,0 +1,61 @@
+<aside class="sidebar">
+  <!-- Daily Islamic Quote Card -->
+  <div class="card">
+    <div class="card-header">
+      <div class="header-left">
+        <app-tahoe-icon name="book-open" [size]="16"></app-tahoe-icon>
+        <h3>Daily Islamic Quote</h3>
+      </div>
+      <button class="refresh-btn" (click)="onRefreshQuote()">
+        <app-tahoe-icon name="refresh" [size]="14"></app-tahoe-icon>
+      </button>
+    </div>
+    <div class="card-body">
+      <p class="quote-text">{{ currentQuoteText }}</p>
+      <p class="quote-footer">{{ currentQuoteFooter }}</p>
+    </div>
+  </div>
+
+  <!-- Notifications Card -->
+  <div class="card">
+    <div class="card-header">
+      <div class="header-left">
+        <app-tahoe-icon name="bell" [size]="16"></app-tahoe-icon>
+        <h3>Notifications</h3>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="notification-list">
+        @for (item of notificationItems; track $index) {
+          <div class="notification-item">
+            <div class="notif-content">
+              <app-tahoe-icon [name]="item.icon" [size]="16"></app-tahoe-icon>
+              <span class="notif-text">{{ item.text }}</span>
+            </div>
+            <span class="notif-time">{{ item.time }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Suggestions Card -->
+  <div class="card">
+    <div class="card-header">
+      <div class="header-left">
+        <app-tahoe-icon name="lightbulb" [size]="16"></app-tahoe-icon>
+        <h3>AI Suggestions</h3>
+      </div>
+    </div>
+    <div class="card-body">
+      <ul class="suggestion-list">
+        @for (item of suggestionItems; track $index) {
+          <li class="suggestion-item">
+            <span class="bullet">💡</span>
+            <span class="text">{{ item.text }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</aside>

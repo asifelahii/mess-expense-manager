@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 type TahoeIconName =
+  // Navigation icons
   | 'dashboard'
   | 'expense'
   | 'meal'
@@ -9,7 +10,27 @@ type TahoeIconName =
   | 'members'
   | 'settings'
   | 'logout'
-  | 'exit';
+  | 'exit'
+  // Notification & Activity icons
+  | 'bell'
+  | 'shopping-bag'
+  | 'utensils'
+  | 'wallet'
+  | 'file-text'
+  | 'receipt'
+  | 'calendar'
+  // Suggestion & Utility icons
+  | 'lightbulb'
+  | 'book-open'
+  | 'refresh'
+  | 'trending-up'
+  | 'alert-circle'
+  | 'info'
+  | 'check-circle'
+  | 'x-circle'
+  | 'inbox';
+
+export type { TahoeIconName };
 
 @Component({
   selector: 'app-tahoe-icon',

@@ -5,43 +5,136 @@
 }
 
 /* Panel surface */
-.panel {
+.gp-panel {
   border-radius: var(--radius-xl);
   padding: 18px;
   width: 100%;
   box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
-:host(.is-interactive) .panel {
+:host(.is-interactive) .gp-panel {
   @include glass.tahoe-interactive;
 }
 
-:host([data-density='compact']) .panel {
+:host([data-density='compact']) .gp-panel {
   padding: 14px;
 }
 
-/* Default layout only */
-:host([data-layout='default']) .panel-header {
+/* Default layout */
+:host([data-layout='default']) .gp-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+
+  flex: 0 0 auto;
   margin-bottom: 12px;
+  min-height: 0;
 }
 
-:host([data-layout='default']) .panel-title {
+:host([data-layout='default']) .gp-title {
   min-width: 0;
   font-weight: 650;
   letter-spacing: -0.01em;
   color: var(--text-primary);
 }
 
-:host([data-layout='default']) .panel-actions {
+:host([data-layout='default']) .gp-actions {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+
+  min-width: 0;
+  flex: 0 0 auto;
 }
 
-:host([data-layout='default']) .panel-body {
-  color: var(--text-secondary);
+/* ✅ Body must render */
+:host([data-layout='default']) .gp-body {
+  flex: 1 1 auto;
+  min-height: 0;
+
+  color: var(--text-primary);
+  opacity: 0.92;
 }
+
+/* Optional: if no actions provided, don't keep empty space */
+:host([data-layout='default']) .gp-actions:empty {
+  display: none;
+}
+
+// @use '../../../../styles/theme/glass';
+
+// :host {
+//   display: block;
+// }
+
+// /* Panel surface */
+// .panel {
+//   border-radius: var(--radius-xl);
+//   padding: 18px;
+//   width: 100%;
+//   box-sizing: border-box;
+
+//   /* ✅ ensure header + body stack and body gets space */
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 0;
+// }
+
+// :host(.is-interactive) .panel {
+//   @include glass.tahoe-interactive;
+// }
+
+// :host([data-density='compact']) .panel {
+//   padding: 14px;
+// }
+
+// /* Default layout only */
+// :host([data-layout='default']) .panel-header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: 12px;
+
+//   /* ✅ avoid header taking all height */
+//   flex: 0 0 auto;
+//   margin-bottom: 12px;
+//   min-height: 0;
+// }
+
+// :host([data-layout='default']) .panel-title {
+//   min-width: 0;
+//   font-weight: 650;
+//   letter-spacing: -0.01em;
+//   color: var(--text-primary);
+// }
+
+// :host([data-layout='default']) .panel-actions {
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 8px;
+
+//   /* ✅ prevent actions from forcing overflow */
+//   min-width: 0;
+//   flex: 0 0 auto;
+// }
+
+// /* ✅ body must be allowed to render and not collapse */
+// :host([data-layout='default']) .panel-body {
+//   margin-top: 4px;
+//   padding-top: 6px;
+
+//   color: var(--text-secondary);
+//   opacity: 0.92;
+//   flex: 1 1 auto;
+//   min-height: 0;
+// }
+
+// /* ✅ optional: if you skip glassActions, don't reserve space */
+// :host([data-layout='default']) .panel-actions:empty {
+//   display: none;
+// }

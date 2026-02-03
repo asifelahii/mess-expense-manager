@@ -1,11 +1,16 @@
 :host {
   display: block;
+  position: fixed;
+  top: 72px; /* Start after navbar */
+  left: 20px; /* Match dashboard shell padding */
+  height: calc(100dvh - 72px - 40px); /* Full height minus navbar and padding */
+  z-index: 10;
 }
 
 /* Stable width + full height column */
 .sidebar {
-  width: clamp(250px, 18vw, 310px);
-  height: calc(100dvh - 24px);
+  width: clamp(150px, 18vw, 250px);
+  height: 100%;
 }
 
 /* Ensure GlassPanel internal container takes full height */
@@ -22,38 +27,6 @@
   gap: 16px;
 }
 
-/* TOP */
-.sidebar-header {
-  padding-top: 4px; /* small breathing */
-}
-
-.brand-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand-logo {
-  height: 40px;
-  width: 40px;
-  border-radius: 14px;
-
-  display: grid;
-  place-items: center;
-
-  font-weight: 900;
-  letter-spacing: -0.02em;
-
-  background: var(--glass-fill-strong);
-  border: 1px solid var(--glass-border);
-}
-
-.brand-name {
-  font-weight: 850;
-  letter-spacing: -0.01em;
-  line-height: 1.12;
-  color: var(--text-primary);
-}
 
 /* MIDDLE: menu scrolls, header/footer fixed */
 .sidebar-menu {

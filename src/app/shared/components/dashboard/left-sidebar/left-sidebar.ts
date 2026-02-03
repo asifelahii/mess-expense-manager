@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { GlassPanelComponent } from '../../ui/glass-panel/glass-panel';
-import { TahoeIcon } from '../tahoe-icon/tahoe-icon';
+import { GlassPanelComponent } from '../../../ui/glass-panel/glass-panel';
+import { TahoeIcon } from '../../tahoe-icon/tahoe-icon';
 
 type MenuKey = 'dashboard' | 'expense' | 'meal' | 'deposit' | 'members' | 'settings';
 

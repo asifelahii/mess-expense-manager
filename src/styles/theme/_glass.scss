@@ -20,6 +20,14 @@
   /* subtle inner highlight that looks good on both Aurora + Tahoe */
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.06));
   opacity: 0.35;
+
+  z-index: 0;
+}
+
+/* ✅ Bring actual panel content above overlay */
+.tahoe-glass > * {
+  position: relative;
+  z-index: 1;
 }
 
 @mixin tahoe-interactive {
